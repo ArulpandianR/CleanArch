@@ -23,14 +23,12 @@ class TasksAdapter(private val context: Context, private val taskList: List<Task
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text =
-            TaskHelper.changeTextColor(
+        holder.name.text =TaskHelper.changeTextColor(
                 "Name : ",
                 taskList[position].name!!,
                 ContextCompat.getColor(context, R.color.header_title_color)
             )
-        holder.price.text =
-            TaskHelper.changeTextColor(
+        holder.price.text =TaskHelper.changeTextColor(
                 "Price : ",
                 taskList[position].price!!,
                 ContextCompat.getColor(context, R.color.header_title_color)
